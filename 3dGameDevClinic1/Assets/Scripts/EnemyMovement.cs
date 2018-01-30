@@ -15,14 +15,24 @@ public class EnemyMovement : MonoBehaviour {
 	public int pinTarget;
 	public float speed;
 
+	public int finalLoopNumber;
+	private int loopNumber;
+	public bool loopPinPath;
+
 	void Start () {
 		pinTarget = 1;
+		loopNumber = 0;
 	}
 
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "Pin") {
 			pinTarget = pinTarget + 1;
-			Debug.Log("Yes");
+			Debug.Log("ChangedPinPath");
+		}
+		if(other.gameObject.tag == "Goal") {
+			Destroy(gameObject);
+			GameManager.Health--;
+			Debug.Log("Damage");
 		}
 	}
 
@@ -41,5 +51,13 @@ public class EnemyMovement : MonoBehaviour {
 		} else if (pinTarget == 6) {
 			transform.position = Vector3.MoveTowards (transform.position, target6.position, step);
 		} 
+		if (loopPinPath == true && pinTarget > 6) {
+			pinTarget = 1;
+			if (loopNumber < finalLoopNumber) {
+				loopNumber++;
+			} else {
+				loopPinPath = false;
+			}
+		}
 	}
 }
