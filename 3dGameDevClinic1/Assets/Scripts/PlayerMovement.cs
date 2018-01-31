@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit, weaponRange) && hit.transform.tag == "Enemy") {
 				Destroy(hit.transform.gameObject);
+				GameManager.Score++;
 			}
 		}
 	}
