@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float weaponRange = 500f;
 
 	public AudioSource gunShot;
+	public AudioSource gunLoad;
 	public Camera fpsCam;
 
 	void Start () {
@@ -41,7 +42,9 @@ public class PlayerMovement : MonoBehaviour {
 	IEnumerator GunCount (){
 		gunShot.Play ();
 		canShoot = false;
-		yield return new WaitForSecondsRealtime (0.5f);
+		yield return new WaitForSecondsRealtime (0.325f);
+		gunLoad.Play ();
+		yield return new WaitForSecondsRealtime (0.325f);
 		canShoot = true;
 	}
 
