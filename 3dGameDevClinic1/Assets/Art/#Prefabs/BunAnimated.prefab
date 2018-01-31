@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 95191763309274448}
   m_Layer: 0
   m_Name: BunAnimated
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +107,8 @@ MonoBehaviour:
   target6: {fileID: 0}
   pinTarget: 0
   speed: 10
+  finalLoopNumber: 5
+  loopPinPath: 1
 --- !u!212 &212879079594388658
 SpriteRenderer:
   m_ObjectHideFlags: 1
