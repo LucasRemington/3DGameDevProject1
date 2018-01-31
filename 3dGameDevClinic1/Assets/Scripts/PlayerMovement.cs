@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour {
 	public bool canShoot = true;
 	public float weaponRange = 500f;
 
-	//public Transform maxRange;
 	public AudioSource gunShot;
 	public Camera fpsCam;
 
@@ -29,17 +28,6 @@ public class PlayerMovement : MonoBehaviour {
 				Destroy(hit.transform.gameObject);
 			}
 		}
-
-			/*&& Time.time > nextFire) {
-			nextFire = Time.time + fireRate;
-			gunShot.Play ();
-			Ray ray = fpsCam.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit;
-			Debug.Log("Bang");
-			if (Physics.Raycast(ray, out hit, weaponRange) && hit.transform.tag == "Enemy") {
-				Destroy(hit.transform.gameObject);
-			}
-		}*/
 	}
 
 	void FixedUpdate () {
@@ -51,6 +39,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	IEnumerator GunCount (){
+		gunShot.Play ();
 		canShoot = false;
 		yield return new WaitForSecondsRealtime (0.5f);
 		canShoot = true;
