@@ -10,7 +10,8 @@ public class Enemy1 : MonoBehaviour {
         currentHP1 -= damageAmount;
         if (currentHP1 <= 0)
         {
-            Destroy(gameObject);
+			GameController.killScore++;
+			Destroy(gameObject);
         }
     }
 }
