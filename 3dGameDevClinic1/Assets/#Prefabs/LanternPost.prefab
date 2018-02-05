@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 4770728979076420}
   - component: {fileID: 33078379050359776}
   - component: {fileID: 23929481688118914}
+  - component: {fileID: 64884974716142776}
   m_Layer: 0
   m_Name: LanternPost
   m_TagString: Untagged
@@ -185,6 +186,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1056171002732288}
   m_Mesh: {fileID: 4300000, guid: 6ae7536b9c12d1049a17fb9e669a3eb5, type: 3}
+--- !u!64 &64884974716142776
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122253760450112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 7f3c2416737b7fb40b598a417b44bf9b, type: 3}
 --- !u!95 &95498385331141818
 Animator:
   serializedVersion: 3

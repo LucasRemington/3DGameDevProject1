@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthCount: {fileID: 0}
+  scoreCount: {fileID: 0}
   waveCount: 0
 --- !u!124 &124136197907730834
 Behaviour:
