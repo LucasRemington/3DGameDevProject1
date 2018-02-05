@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Testing/Sam_Test_Scene.unity
+- path: Assets/Scenes/Testing/AJ_AssetTest.unity
   isLoaded: 1
   isActive: 1
