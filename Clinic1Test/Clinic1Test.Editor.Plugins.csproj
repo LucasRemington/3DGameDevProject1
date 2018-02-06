@@ -297,6 +297,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Clinic1Test.csproj">
+      <Project>{6AB52326-9EB3-8AE8-7E50-7B56FB158C2D}</Project>
+      <Name>Clinic1Test</Name>
+    </ProjectReference>
     <ProjectReference Include="Clinic1Test.Plugins.csproj">
       <Project>{005180D7-8955-2687-0683-C77DEC651619}</Project>
       <Name>Clinic1Test.Plugins</Name>
