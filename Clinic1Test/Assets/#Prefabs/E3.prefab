@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114839321071261220}
   - component: {fileID: 212689981507129428}
   - component: {fileID: 95095597309540704}
+  - component: {fileID: 114444363276575080}
   m_Layer: 0
   m_Name: E3
   m_TagString: Untagged
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1327332686060274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -519.178, y: -371.374, z: 16.169}
+  m_LocalPosition: {x: 12.023907, y: 42.58973, z: 197.82512}
   m_LocalScale: {x: 1.7877997, y: 1.7877988, z: 1.7877988}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,7 +53,7 @@ Rigidbody:
   m_GameObject: {fileID: 1327332686060274}
   serializedVersion: 2
   m_Mass: 5
-  m_Drag: 0
+  m_Drag: 0.6
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -76,6 +77,34 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114444363276575080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1327332686060274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421f825fcce77ec498431bfe0a211068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target1: {fileID: 0}
+  target2: {fileID: 0}
+  target3: {fileID: 0}
+  target4: {fileID: 0}
+  target5: {fileID: 0}
+  target6: {fileID: 0}
+  trans1: {fileID: 0}
+  trans2: {fileID: 0}
+  trans3: {fileID: 0}
+  trans4: {fileID: 0}
+  trans5: {fileID: 0}
+  trans6: {fileID: 0}
+  pinTarget: 0
+  speed: 3
+  finalLoopNumber: 3
+  loopPinPath: 0
+  spawnOne: 1
 --- !u!114 &114839321071261220
 MonoBehaviour:
   m_ObjectHideFlags: 1
