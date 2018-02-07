@@ -306,6 +306,7 @@
     <Compile Include="Assets\Scripts\Fire.cs" />
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\GateAlarm.cs" />
     <Compile Include="Assets\Scripts\HeadBob.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\OldScripts\CameraMovement.cs" />
