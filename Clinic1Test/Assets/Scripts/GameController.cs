@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
 	public GameObject[] enemies;
 	public GameObject gates;
 	public static int gateHP = 10;
+	public int lastgateHP = 10;
 	public int maxWaves = 10;
 	public int currentWave = 0;
 	public float spawnTime = 3f;
@@ -17,6 +18,7 @@ public class GameController : MonoBehaviour {
 	public Text gateHealthcount;
 	public Text killScorecount;
 	public Text waveCount;
+	public AudioSource alarm;
 
 	void Start () 
 	{
@@ -26,9 +28,14 @@ public class GameController : MonoBehaviour {
 
 	void Update()
 	{
+		if (lastgateHP > gateHP) {
+			alarm.Play();
+			Debug.Log ("Alarm");
+		}
 		gateHealthcount.text = "Health: " + gateHP.ToString ();
 		waveCount.text = "Wave " + currentWave.ToString ();
 		killScorecount.text = "Score: " + killScore.ToString ();
+		lastgateHP = gateHP;
 	}
 
 	private IEnumerator WaveMode()
@@ -52,4 +59,5 @@ public class GameController : MonoBehaviour {
 		int enemiesIndex = Random.Range (0, enemies.Length);
 		Instantiate (enemies [enemiesIndex], spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
 	}
+		
 }
