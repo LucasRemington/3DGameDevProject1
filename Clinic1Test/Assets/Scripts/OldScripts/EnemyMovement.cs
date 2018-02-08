@@ -41,15 +41,32 @@ public class EnemyMovement : MonoBehaviour {
 	}
 
 	void Awake () {
+		
 		SetTargets ();
 	}
 
 	void OnTriggerEnter(Collider other) {
 		
-		if(other.gameObject.tag == "Pin") {
+		if(other.gameObject.tag == "Pin1" && pinTarget == 1) {
 			pinTarget = pinTarget + 1;
 			Debug.Log("ChangedPinPath");
-		}
+		} else if(other.gameObject.tag == "Pin2" && pinTarget == 2) {
+			pinTarget = pinTarget + 1;
+			Debug.Log("ChangedPinPath");
+		} else if(other.gameObject.tag == "Pin3" && pinTarget == 3) {
+			pinTarget = pinTarget + 1;
+			Debug.Log("ChangedPinPath");
+		} else if(other.gameObject.tag == "Pin4" && pinTarget == 4) {
+			pinTarget = pinTarget + 1;
+			Debug.Log("ChangedPinPath");
+		} else if(other.gameObject.tag == "Pin5" && pinTarget == 5) {
+			pinTarget = pinTarget + 1;
+			Debug.Log("ChangedPinPath");
+		} else if(other.gameObject.tag == "Pin6" && pinTarget == 6) {
+			pinTarget = pinTarget + 1;
+			Debug.Log("ChangedPinPath");
+		} 
+
 
 		if(other.gameObject.tag == "Goal") {
 			Destroy(gameObject);
